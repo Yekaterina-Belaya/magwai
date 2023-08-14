@@ -79,7 +79,7 @@ window.addEventListener("DOMContentLoaded", () => {
     }) => {
       return `<article class="card"> <div class="card__image">
         <img
-          src="../img/cards/Bitmap(${getRandomArbitrary(0, 9)}).jpg"
+          src="./img/cards/Bitmap(${getRandomArbitrary(0, 9)}).jpg"
           alt="Изображение"
           class="img-responsice"
         />

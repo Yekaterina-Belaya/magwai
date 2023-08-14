@@ -2,16 +2,11 @@
     background-color: #fff;
     padding: 50px 80px 40px 80px;
     width: 500px;
-    min-height: 550px;
-    position:absolute;
-    top: 50px;
-    bottom: 0;
     z-index: 10;
 
     @include media("max", "sm") {
         padding: 20px 50px;
         width: 100%;
-        top: 0;
         height: 100%;
     }
 
