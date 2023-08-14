@@ -1,0 +1,19 @@
+@mixin font($f-name, $f-style, $f-weight, $f-url) {
+  @font-face {
+    font-family: $f-name;
+    font-style: $f-style;
+    font-weight: $f-weight;
+    src: url($f-url) format("ttf");
+  }
+}
+
+@include font("Montserrat", "", 300, "../fonts/Montserrat-Light.ttf");
+
+@include font("Montserrat", normal, 400, "../fonts/Montserrat-Regular.ttf");
+
+@include font("Montserrat", medium, 500, "../fonts/Montserrat-Black.ttf");
+
+@include font("Montserrat", "", 700, "../fonts/Montserrat-SemiBold.ttf");
+
+@include font("Montserrat", "", 800, "../fonts/Montserrat-Bold.ttf");
+

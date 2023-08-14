@@ -1,0 +1,82 @@
+.invoice {
+  display: flex;
+  padding: 0 23px;
+
+  &__icon {
+    width: 70px;
+    height: 50px;
+    border: 1px solid rgba($color: #fff, $alpha: 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+
+    transform: skew(-20deg);
+
+    & img {
+      width: 32px;
+      height: 32px;
+      opacity: 40%;
+
+      transform: skew(20deg);
+
+      @include media("max", "md") {
+        width: 35px;
+        height: 35px;
+      }
+    }
+
+    @include media("max", "md") {
+      width: 80px;
+      height: 60px;
+    }
+    @include media("max", "sm") {
+      margin-right: 0;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    background-color: $main-button-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: skew(-20deg);
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: #fff;
+      height: 100%;
+      width: 6px;
+      right: -13px;
+    }
+
+    &:hover {
+      box-shadow: inset 500px 0 0 0 #131f2f;
+      color: #fff;
+      transition: 0.7s;
+    }
+
+    & button {
+      text-transform: uppercase;
+    }
+
+    &--header {
+      width: 220px;
+      height: 50px;
+      position: relative;
+
+      @include media("max", "md") {
+        width: 190px;
+        height: 60px;
+      }
+    }
+
+    &--main {
+      width: 282.5px;
+      height: 60px;
+    }
+  }
+}

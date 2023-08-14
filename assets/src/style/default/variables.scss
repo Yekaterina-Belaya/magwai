@@ -1,0 +1,32 @@
+// Переменные
+
+$text: #1a1a1a;
+$placeholder: #111111;
+$link: red;
+
+// Основные цвета
+
+$main-button-color: #c2ab81;
+$icons-color: rgba(255, 255, 255, 1);
+
+// Variables Bootstrap 4
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 60px;
+$gutter: $grid-gutter-width;
+
+// Breakpoints mixin settings (node_modules/bootstrap/scss/mixins/_breakpoints.scss)
+// Example: +media-breakpoint-down(xs) - ≥576px / +media-breakpoint-up(sm) - // ≤576px
+// Default variables: node_modules/bootstrap/scss/_variables.scss
+
+$sizes: ("xs":320px, "sm":576px, "md":768px, "lg":992px, "xl":1200px);
+
+@mixin media($minmax, $media) {
+  @each $size, $resolution in $sizes {
+    @if $media == $size {
+      @media only screen and (#{$minmax}-width: $resolution) {
+        @content;
+      }
+    }
+  }
+}

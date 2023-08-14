@@ -1,0 +1,71 @@
+@import "../libs/normalize/index.scss";
+@import "../libs/ui-main/dist/fancybox/fancybox.css";
+
+
+// Подключение дефолтных
+@import "default/variables";
+@import "default/global";
+@import "default/icons";
+
+// Подключение своих SCSS файлов
+@import "my";
+@import "../style/fonts.scss";
+@import "./components/_header.scss";
+@import "./components/_menu.scss";
+@import "./components/_btn.scss";
+@import "./components/_card.scss";
+@import "./components/_cards.scss";
+@import "./components/_invoice.scss";
+@import "./components/_mainpage.scss";
+@import "./components/_cardspage.scss";
+@import "./components/_hover.scss";
+@import "./components/_burger.scss";
+@import "./components/_modal.scss";
+@import "./components/_form.scss";
+@import "./components/_section.scss";
+
+
+
+body {
+  background-color: #131313;
+  color: #ffffff;
+
+  &.menu-opened {
+    .header__menu {
+      display: block;
+    }
+  }
+}
+
+section {
+  overflow: hidden;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  &.img-width {
+    width: 100%;
+  }
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 100px;
+  padding-right: 100px;
+  max-width: 100%;
+  width: 1720px;
+
+  @include media("max", "xl") {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @include media("max", "lg") {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+

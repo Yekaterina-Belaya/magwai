@@ -1,0 +1,29 @@
+.cardspage {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    & h2 {
+      margin-bottom: 53px;
+      font-size: 42px;
+
+      @include media("max", "md") {
+        font-size: 20px;
+      }
+      @include media("max", "sm") {
+        font-size: 20px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &__button {
+    &--more {
+      &.is-disabled {
+        display: none;
+      }
+    }
+  }
+}

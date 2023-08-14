@@ -1,0 +1,22 @@
+.hover {
+  position: relative;
+}
+
+.hover--border::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: -2px;
+  background-color: $main-button-color;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s;
+}
+
+.hover--border:hover::after {
+  content: "";
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

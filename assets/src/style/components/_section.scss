@@ -1,0 +1,21 @@
+.section {
+  &--mainpage {
+    position: relative;
+  }
+
+  &--cardspage {
+    margin-top: 100px;
+    margin-bottom: 256px;
+    @include media("max", "md") {
+      margin-bottom: 156px;
+  }
+    @include media("max", "sm") {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+  }
+}
